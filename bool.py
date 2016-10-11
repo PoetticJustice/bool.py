@@ -1,6 +1,21 @@
 # Ask for first and second numbers from the user before we define anything
-num1 = int(input("Please enter your first number: "))
-num2 = int(input("Please enter your second number: "))
+# Additionally, sure to handle exceptions correctly with the "while True:"
+# This makes it so the script doesn't crash when you 
+while True:
+    try:
+        num1 = int(input("Please enter your first number: "))
+        break
+    except ValueError:
+        print('You have to use an integer. Try again: ')
+
+# Same as above, except for the second input from the user
+while True:
+    try:
+        num2 = int(input("Please enter your second number: "))
+        break
+    except ValueError:
+        print('You have to use an integer. Try again: ')
+
 
 #Create the comparison function that denotes what the assignment asked for
 def comparison(a, b):
